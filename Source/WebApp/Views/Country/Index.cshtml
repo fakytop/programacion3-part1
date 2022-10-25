@@ -1,0 +1,77 @@
+﻿@model IEnumerable<LogicaNegocio.Entidades.Country>
+
+@{
+    ViewData["Title"] = "Países";
+}
+
+<h1>Listado de países.</h1>
+
+<p>
+    <a asp-action="Create">Agregar un país.</a>
+</p>
+
+<div>
+    <form asp-controller="Country" asp-action="Index" method="post">
+        <label for="region">Buscar por región</label>
+        <input type="text" name="region" placeholder="Ingresa una región..." />
+        <input type="submit" value="Buscar" />
+    </form>
+</div>
+
+<div>
+    <form asp-controller="Country" asp-action="FindByISO" method="post">
+        <label for="iso">Buscar por código ISO Alpha 3</label>
+        <input type="text" name="iso" placeholder="Ingresa un código ISO Alpha 3..." />
+        <input type="submit" value="Buscar" />
+    </form>
+    <p>@ViewBag.Message</p>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Imagen
+            </th>
+            <th>
+                ID
+            </th>
+            <th>
+                Nombre
+            </th>
+            <th>
+                ISO Alpha
+            </th>
+            <th>
+                Región
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                <img class="img-thumbnail" style="width: 128px;" src="~/img/countries/@item.Image" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name.Value)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsoAlfa3.Value)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Region.Value)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Update", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

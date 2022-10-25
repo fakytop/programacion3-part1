@@ -1,0 +1,7 @@
+SET IDENTITY_INSERT [dbo].[MatchResult] ON
+INSERT INTO [dbo].[MatchResult] ([Id], [Goals_Home], [Goals_Away], [Yellow_Cards_Home], [Yellow_Cards_Away], [Red_Cards_Home], [Red_Cards_Away], [Red_Direct_Card_Home], [Red_Direct_Card_Away], [Points_Away], [Points_Home]) VALUES (3, 3, 1, 1, 1, 0, 0, 1, 0, 0, 3)
+INSERT INTO [dbo].[MatchResult] ([Id], [Goals_Home], [Goals_Away], [Yellow_Cards_Home], [Yellow_Cards_Away], [Red_Cards_Home], [Red_Cards_Away], [Red_Direct_Card_Home], [Red_Direct_Card_Away], [Points_Away], [Points_Home]) VALUES (4, 1, 1, 0, 0, 0, 0, 2, 1, 1, 1)
+INSERT INTO [dbo].[MatchResult] ([Id], [Goals_Home], [Goals_Away], [Yellow_Cards_Home], [Yellow_Cards_Away], [Red_Cards_Home], [Red_Cards_Away], [Red_Direct_Card_Home], [Red_Direct_Card_Away], [Points_Away], [Points_Home]) VALUES (5, 2, 1, 2, 1, 1, 0, 0, 1, 0, 3)
+INSERT INTO [dbo].[MatchResult] ([Id], [Goals_Home], [Goals_Away], [Yellow_Cards_Home], [Yellow_Cards_Away], [Red_Cards_Home], [Red_Cards_Away], [Red_Direct_Card_Home], [Red_Direct_Card_Away], [Points_Away], [Points_Home]) VALUES (6, 4, 2, 1, 2, 1, 0, 1, 1, 0, 1)
+INSERT INTO [dbo].[MatchResult] ([Id], [Goals_Home], [Goals_Away], [Yellow_Cards_Home], [Yellow_Cards_Away], [Red_Cards_Home], [Red_Cards_Away], [Red_Direct_Card_Home], [Red_Direct_Card_Away], [Points_Away], [Points_Home]) VALUES (7, 0, 3, 2, 1, 1, 0, 0, 0, 3, 0)
+SET IDENTITY_INSERT [dbo].[MatchResult] OFF
